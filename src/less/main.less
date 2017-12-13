@@ -1,41 +1,127 @@
-@import 'media';
+@import (less) '../../node_modules/normalize.css/normalize.css';
 
-// Код для примера
+@header-color: #668294;
+
 body {
-    background: #f00;
+    font-family: 'Open Sans';
 }
 
-.menu {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background: red; // red on small devices
-
-    @media @tablet {
-        background: green; // green on medium devices
+.header {
+    &__menu {
+        background-color: #394e5b;
+        border-bottom: 1px solid @header-color;
     }
 
-    @media @desktop {
-        background: blue; // blue on large devices
+    &_wrapperMenu {
+        max-width: 920px;
+        height: 80px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    &__item {
-        display: inline-block;
-        list-style-type: none;
+    &__name {
+        color: #fff;
+        font-family: "EXO", sans-serif;
+        font-size: 32px;
+        letter-spacing: 10px;
     }
 
-    &__link {
-        color: #FFF;
+    &__menuList {
+        ul {
+            list-style: none;
+            display: flex;
+            padding-left: 0;
+
+            li:last-child {
+                padding-right: 15px;
+            }
+        }
+        color: @header-color;
     }
 
-    // Bottom Menu
-    &_bottom { // BEM modifier example
-        background: green;
+    &__menuItem {
+        font-size: 14px;
+        letter-spacing: 2px;
     }
 
-    &_bottom &__link {
-        color: #f00;
+    &__menuLink {
+        color: @header-color;
+        text-decoration: none;
+    }
+
+    &__menuLink:hover {
+        color: #fff;
+    }
+
+    &__slash {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    &_activeLink {
+        color: #fff;
+        position: relative;
+    }
+
+    &_activeLink::after{
+        position: absolute;
+        top: 20px;
+        left: 14px;
+        width: 45px;
+        border-top: 2px solid #dd6359;
+        content:"";
+    }
+
+    &__slider {
+        background-color: #4c6677;
+    }
+
+    &_wrapperSlider {
+        max-width: 920px;
+        height: 555px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__firstString {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 52px;
+        font-weight: normal;
+        letter-spacing: 7px;
+    }
+
+    &__secondString {
+        margin: 20px 0 0;
+        padding: 0;
+        color: #fff;
+        font-size: 30px;
+        font-weight: normal;
+        letter-spacing: 5px;
+    }
+
+    &__button {
+        width: 250px;
+        height: 62px;
+        background-color: #d16262;
+        color: #fff;
+        font-size: 20px;
+        letter-spacing: 3px;
+        border-radius: 5px;
+        border: none;
+        border-bottom: 2px solid #953d3d;
+        cursor: pointer;
+        margin-top: 40px;
+    }
+
+    &__button:hover {
+        background-color: lighten(#d16262, 3%);
+        border-bottom: 2px solid lighten(#953d3d, 3%);
     }
 }
-
-
