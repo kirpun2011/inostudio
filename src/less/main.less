@@ -6,6 +6,11 @@ body {
     font-family: 'Open Sans';
 }
 
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .header {
     &__menu {
         background-color: #394e5b;
@@ -26,6 +31,7 @@ body {
         font-family: "EXO", sans-serif;
         font-size: 32px;
         letter-spacing: 10px;
+        cursor: default;
     }
 
     &__menuList {
@@ -76,9 +82,10 @@ body {
 
     &__slider {
         background: #4c6677;
+        border-bottom: 3px solid #fff;
     }
 
-    &_wrapperSlider {
+    &__wrapperSlider {
         max-width: 920px;
         height: 555px;
         margin: 0 auto;
@@ -88,6 +95,13 @@ body {
         align-items: center;
     }
 
+    &__atlasbg {
+        position: absolute;
+        width: 1000px;
+        height: 450px;
+        opacity: 0.1;
+    }
+
     &__firstString {
         margin: 0;
         padding: 0;
@@ -95,6 +109,8 @@ body {
         font-size: 52px;
         font-weight: normal;
         letter-spacing: 7px;
+        z-index: 100;
+        cursor: default;
     }
 
     &__secondString {
@@ -104,6 +120,8 @@ body {
         font-size: 30px;
         font-weight: normal;
         letter-spacing: 5px;
+        z-index: 100;
+        cursor: default;
     }
 
     &__button {
@@ -118,10 +136,131 @@ body {
         border-bottom: 2px solid #953d3d;
         cursor: pointer;
         margin-top: 40px;
+        z-index: 100;
     }
 
     &__button:hover {
         background-color: lighten(#d16262, 3%);
         border-bottom: 2px solid lighten(#953d3d, 3%);
+    }
+}
+
+.content {
+    .whatWeDo {
+        background-color: #e9edef;
+
+        &_wrapper {
+            width: 920px;
+            height: 640px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__title {
+            margin-top: 52px;
+            margin-bottom: 52px;
+            font-size: 42px;
+            color: #394e5b;
+            letter-spacing: 5px;
+            position: relative;
+            cursor: default;
+        }
+
+        &__title::before{
+            position: absolute;
+            top: 70px;
+            left: 65px;
+            width: 182px;
+            border-top: 2px solid #919da5;
+            content:"";
+        }
+
+        &__desc {
+            font-size: 20px;
+            color: #394e5b;
+            text-align: center;
+            letter-spacing: 3px;
+            line-height: 1.5;
+            margin-bottom: 85px;
+            cursor: default;
+        }
+
+        &__services {
+            display: flex;
+            flex-direction: row;
+
+            .servMod {
+                width: 278px;
+                height: 238px;
+                border: 1px solid #919da5;
+                padding-top: 84px;
+                text-align: center;
+            }
+        }
+
+        .serviceTitle {
+            font-family: "EXO";
+            font-size: 24px;
+            color: #d16262;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+            cursor: default;
+        }
+
+        .serviceDesc {
+            font-size: 16px;
+            color: #4c6677;
+            line-height: 1.7;
+            cursor: default;
+        }
+
+        &__service1 {
+            margin-right: 40px;
+        }
+
+        &__service1::after {
+            background: url(../img/service1.png) no-repeat;
+            transform: translateX(65px) translateY(-340px);
+            height: 110px;
+            display: block;
+            content: '';
+        }
+
+        .service1Desc {
+            margin-right: 45px;
+            margin-left: 45px;
+        }
+
+        &__service2 {
+            margin-right: 40px;
+        }
+
+        &__service2::after {
+            background: url(../img/service2.png) no-repeat;
+            transform: translateX(65px) translateY(-340px);
+            height: 110px;
+            display: block;
+            content: '';
+        }
+
+        .service2Desc {
+            margin-right: 33px;
+            margin-left: 33px;
+        }
+
+        .service3Desc {
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+
+        &__service3::after {
+            background: url(../img/service3.png) no-repeat;
+            transform: translateX(65px) translateY(-340px);
+            height: 110px;
+            display: block;
+            content: '';
+        }
     }
 }
