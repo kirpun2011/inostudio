@@ -1,7 +1,7 @@
 {
-  "name": "project for Inostudio",
+  "name": "static-project-template",
   "version": "0.0.1",
-  "description": "Simple Project",
+  "description": "Simple project template with LESS, Autoprefixer and livereload.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,7 +23,7 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-less": "^3.3.0",
-    "install": "^0.10.2",
+    "install": "^0.10.1",
     "jquery": "^3.2.1",
     "normalize.css": "^7.0.0"
   }
