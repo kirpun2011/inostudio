@@ -1,7 +1,7 @@
 {
-  "name": "static-project-template",
+  "name": "project for Inostudio",
   "version": "0.0.1",
-  "description": "Simple project template with LESS, Autoprefixer and livereload.",
+  "description": "Simple Project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
     "dev": "gulp",
     "prod": "gulp prod"
   },
-  "author": "Andrey Miskov",
+  "author": "Vadim Kirpun",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.11",
