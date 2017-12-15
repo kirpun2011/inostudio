@@ -3,7 +3,7 @@
 @header-color: #668294;
 
 body {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     cursor: default;
 }
 
@@ -22,12 +22,14 @@ a {
     text-decoration: none;
 }
 
+// ЗАГОЛОВОК
 .header {
     &__menu {
         background-color: #394e5b;
         border-bottom: 1px solid @header-color;
     }
 
+    //ОБОЛОЧКА ЗАГОЛОВКА
     &_wrapperMenu {
         max-width: 920px;
         height: 80px;
@@ -37,6 +39,7 @@ a {
         align-items: center;
     }
 
+    // UNGART
     &__name {
         color: #fff;
         font-family: "EXO", sans-serif;
@@ -44,6 +47,7 @@ a {
         letter-spacing: 10px;
     }
 
+    // ССЫЛКИ
     &__menuList {
         ul {
             list-style: none;
@@ -90,11 +94,13 @@ a {
         content:"";
     }
 
+    // ЗАГОЛОВОК 2 БЛОК
     &__slider {
         background: #4c6677;
         border-bottom: 3px solid #fff;
     }
 
+    // ОБОЛОЧКА ЗАГОЛОВКА
     &__wrapperSlider {
         max-width: 920px;
         height: 555px;
@@ -105,6 +111,7 @@ a {
         align-items: center;
     }
 
+    // ФОН 2 БЛОКА
     &__atlasbg {
         position: absolute;
         width: 1000px;
@@ -133,6 +140,7 @@ a {
     }
 }
 
+// КНОПКА
 button {
     width: 250px;
     height: 62px;
@@ -152,12 +160,16 @@ button:hover {
     border-bottom: 2px solid lighten(#953d3d, 3%);
 }
 
+// ОСНОВНАЯ ЧАСТЬ
 .content {
+
+    // БЛОК 1 WHAT WE DO
     .whatWeDo {
         background-color: #e9edef;
 
+        // ОБОЛОЧКА БЛОКА 1
         &_wrapper {
-            width: 920px;
+            max-width: 920px;
             height: 660px;
             margin: 0 auto;
             display: flex;
@@ -165,6 +177,7 @@ button:hover {
             align-items: center;
         }
 
+        // ЗАГОЛОВОК БЛОКА 1
         &__title {
             margin-top: 52px;
             margin-bottom: 52px;
@@ -183,6 +196,7 @@ button:hover {
             content:"";
         }
 
+        // ОПИСАНИЕ БЛОКА 1
         &__desc {
             font-size: 20px;
             color: #394e5b;
@@ -192,6 +206,7 @@ button:hover {
             margin-bottom: 85px;
         }
 
+        // СЕРВИСЫ
         &__services {
             display: flex;
             flex-direction: row;
@@ -206,7 +221,7 @@ button:hover {
         }
 
         .serviceTitle {
-            font-family: "EXO";
+            font-family: "EXO", sans-serif;
             font-size: 24px;
             color: #d16262;
             letter-spacing: 4px;
@@ -219,25 +234,22 @@ button:hover {
             line-height: 1.7;
         }
 
+        // ОТСТУПЫ ДЛЯ БЛОКОВ СЕРВИСОВ
         &__service1 {
             margin-right: 40px;
         }
 
+        &__service2 {
+            margin-right: 40px;
+        }
+
+        // ИКОНКИ
         &__service1::after {
             background: url(../img/service1.png) no-repeat;
             transform: translateX(65px) translateY(-340px);
             height: 110px;
             display: block;
             content: '';
-        }
-
-        .service1Desc {
-            margin-right: 45px;
-            margin-left: 45px;
-        }
-
-        &__service2 {
-            margin-right: 40px;
         }
 
         &__service2::after {
@@ -248,6 +260,19 @@ button:hover {
             content: '';
         }
 
+        &__service3::after {
+            background: url(../img/service3.png) no-repeat;
+            transform: translateX(65px) translateY(-340px);
+            height: 110px;
+            display: block;
+            content: '';
+        }
+
+        // ОТСТУПЫ ДЛЯ ВНУТРЕННЕЙ СОСТАВЛЯЮЩЕЙ БЛОКОВ
+        .service1Desc {
+            margin-right: 45px;
+            margin-left: 45px;
+        }
         .service2Desc {
             margin-right: 33px;
             margin-left: 33px;
@@ -257,22 +282,16 @@ button:hover {
             margin-right: 30px;
             margin-left: 30px;
         }
-
-        &__service3::after {
-            background: url(../img/service3.png) no-repeat;
-            transform: translateX(65px) translateY(-340px);
-            height: 110px;
-            display: block;
-            content: '';
-        }
     }
 
+    // БЛОК 2 PORTFOLIO
     .portfolio {
         background-color: #fff;
         border-top: 1px solid #ced5d9;
 
+        // ОБОЛОЧКА
         &_wrapper {
-            width: 920px;
+            max-width: 920px;
             height: 960px;
             margin: 0 auto;
             display: flex;
@@ -283,7 +302,7 @@ button:hover {
         &__title {
             margin-top: 50px;
             margin-bottom: 35px;
-            font-family: "EXO";
+            font-family: "EXO", sans-serif;
             font-size: 42px;
             letter-spacing: 7px;
             position: relative;
@@ -303,10 +322,12 @@ button:hover {
         }
 
         &__allProjects {
+            font-family: "Ubuntu", sans-serif;
             font-size: 16px;
             letter-spacing: 3px;
         }
 
+        // ПРОЕКТЫ
         &__projects {
             display: flex;
             flex-direction: row;
@@ -335,14 +356,14 @@ button:hover {
                 transform: scale(0.5);
                 opacity: 0;
                 cursor: default;
+                color: #fff;
             }
 
             h3 {
                 top: 42%;
                 left: 22.5%;
-                font-family: "EXO";
+                font-family: "EXO", sans-serif;
                 font-size: 24px;
-                color: #fff;
                 letter-spacing: 4px;
             }
 
@@ -350,20 +371,26 @@ button:hover {
                 top: 54%;
                 left: 22.5%;
                 font-size: 16px;
-                color: #fff;
                 letter-spacing: 2px;
             }
         }
 
+        &_projMod {
+            margin-right: 0;
+        }
+
+        // НАДПИСЬ ПО НАВЕДЕНИЮ
         &__project:hover h3, &__project:hover p{
             opacity: 1;
             transform: scale(1);
         }
 
+        // УВЕЛИЧЕНИЕ ИЗОБРАЖЕНИЯ ПО НАВЕДЕНИЮ
         &__project:hover img {
             transform: scale(1.2);
         }
 
+        // ТЕМНЫЙ ФОН ПО НАВЕДЕНИЮ
         &__project::before {
             position: absolute;
             content: '';
@@ -380,24 +407,29 @@ button:hover {
             left: 0;
         }
 
-        &_projMod {
-            margin-right: 0;
+        .portfolioButton {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: bold;
         }
     }
 
+    // БЛОК 3 ABOUT
     .about {
         background-color: #384d59;
         border-top: 1px solid #222f37;
 
-
+        // ФОНОВОЕ ИЗОБРАЖЕНИЕ
         &__imgBG {
             position: absolute;
-            opacity: 0.02;
+            opacity: 0.01;
             z-index: 1;
+            width: 100%;
+            height: 639px;
         }
 
+        // ОБОЛОЧКА
         &__wrapper {
-            width: 920px;
+            max-width: 920px;
             height: 639px;
             margin: 0 auto;
             display: flex;
@@ -408,12 +440,12 @@ button:hover {
         &__title {
             margin-top: 50px;
             margin-bottom: 40px;
-            font-family: "EXO";
+            font-family: "EXO", sans-serif;
             font-size: 42px;
             letter-spacing: 7px;
             color: #fff;
             position: relative;
-         }
+        }
 
         &__title::before{
             position: absolute;
@@ -427,13 +459,14 @@ button:hover {
         &__description {
             text-align: center;
             font-size: 20px;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             line-height: 1.5;
             color: #88a4b6;
             cursor: default;
             margin-bottom: 28px;
         }
 
+        // ИКОНКИ ЛЮДЕЙ
         &__specialists {
             display: flex;
             flex-direction: row;
@@ -454,10 +487,12 @@ button:hover {
             }
         }
 
+        // УВЕЛИЧЕНИЕ ИЗОБРАЖЕНИЯ ПО НАВЕДЕНИЮ
         &__specialist:hover img {
             transform: scale(1.05);
         }
 
+        // БЕЛЫЙ ФОН ПО НАВЕДЕНИЮ
         &__specialist::before {
             position: absolute;
             content: '';
@@ -482,10 +517,12 @@ button:hover {
             opacity: 0.8;
         }
 
+        // НУЛЕВОЙ ОТСТУП У ПОСЛЕДНЕГО ЭЛЕМЕНТА В СТРОКЕ
         .last {
             margin-right: 0;
         }
 
+        // ТАБЛИЧКИ С ОПИСАНИЕМ ЛЮДЕЙ
         &__specDesc {
             width: 200px;
             height: 65px;
@@ -511,6 +548,7 @@ button:hover {
             }
         }
 
+        // ИКОНКИ СОЦИАЛЬНЫХ СЕТЕЙ
         .icons {
             display: flex;
             font-size: 20px;
@@ -526,6 +564,7 @@ button:hover {
                 color: #74838c;
             }
 
+            // ЦВЕТ ИКОНКИ ПО НАВЕДЕНИЮ
             &__facebook, &__twitter {
                 margin-right: 9px;
             }
@@ -546,6 +585,7 @@ button:hover {
             }
         }
 
+        // ОТОБРАЖЕНИЕ ИКОНОК ПО НАВЕДЕНИЮ
         &__specialist:hover .icons {
             opacity: 1;
         }
@@ -557,6 +597,196 @@ button:hover {
             border-radius: 100%;
             text-align: center;
             line-height: 34px;
+        }
+    }
+}
+
+// ФУТЕР
+.footer {
+
+    // БЛОК 1 CONTACT
+    .contact {
+        background-color: #e9edef;
+        border-bottom: 1px solid #cdd8dd;
+
+        // ОБОЛОЧКА
+        &_wrapper {
+            max-width: 920px;
+            height: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        // ЗАГОЛОВОК
+        &__title {
+            margin-top: 50px;
+            margin-bottom: 45px;
+            font-family: "EXO", sans-serif;
+            font-size: 42px;
+            letter-spacing: 7px;
+            position: relative;
+            color: #394e5b;
+        }
+
+        &__title::before{
+            position: absolute;
+            top: 65px;
+            left: 60px;
+            width: 182px;
+            border-top: 2px solid #919da5;
+            content:"";
+        }
+
+        // ОПИСАНИЕ
+        &__description {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: lighter;
+            text-align: center;
+            color: #4c6677;
+            font-size: 20px;
+            letter-spacing: 4px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        // ИНПУТЫ
+        &__inputs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .input {
+                border: 1px solid #b6c6d0;
+                border-radius: 10px;
+                font-family: "EXO", sans-serif;
+                font-weight: 200;
+                font-size: 20px;
+                letter-spacing: 2px;
+            }
+
+            .input:focus {
+                outline: 0;
+                border: 2px solid #b6c6d0;
+            }
+        }
+
+        &__nameInput {
+            width: 408px;
+            height: 61px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        &__mailInput {
+            width: 408px;
+            height: 61px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        &__messageInput {
+            width: 878px;
+            height: 132px;
+            margin-bottom: 30px;
+            padding: 20px 20px 0 20px;
+        }
+
+        // УТОЛЩЕНИЕ БОРДЕРА ПРИ ФОКУСЕ
+        &__nameInput:focus {
+            width: 406px;
+            height: 59px;
+            padding-left: 19px;
+        }
+
+        &__mailInput:focus {
+            width: 406px;
+            height: 59px;
+            padding-left: 19px;
+        }
+
+        &__messageInput:focus {
+            width: 876px;
+            height: 130px;
+            padding-left: 19px;
+            padding-top: 19px;
+        }
+
+        &__button {
+            margin: 0 auto;
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 700;
+        }
+    }
+
+    .social {
+        background: #fff;
+
+        &_wrapper {
+            max-width: 920px;
+            height: 112px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__rights {
+            width: 370px;
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 300;
+            margin-top: 50px;
+            color: #394e5b;
+            letter-spacing: 3px;
+        }
+
+        &__icons {
+            width: 300px;
+            display: flex;
+            justify-content: flex-end;
+            color: #74838c;
+            margin-top: 35px;
+            a {
+                color: #74838c;
+            }
+        }
+
+        &__icon {
+            height: 42px;
+            width: 42px;
+            border: 4px solid #74838c;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 42px;
+            font-size: 20px;
+            margin-left: 8px;
+            transition: all 0.3s;
+        }
+
+        .facebook:hover {
+            border: 4px solid #3B5998;
+            color: #3B5998;
+        }
+
+        .twitter:hover {
+            color: #2DAAE1;
+            border-color: #2DAAE1;
+        }
+
+        .youtube:hover {
+            color: #FF0000;
+            border-color: #FF0000;
+        }
+
+        .linkedin:hover {
+            color: #225982;
+            border-color: #225982;
+        }
+
+        .envelope:hover {
+            color: #30BAF7;
+            border-color: #30BAF7;
         }
     }
 }
