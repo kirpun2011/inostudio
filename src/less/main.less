@@ -69,29 +69,42 @@ a {
     &__menuLink {
         color: @header-color;
         text-decoration: none;
+        position: relative;
+    }
+
+    &__menuLink::after{
+        opacity: 0;
+        position: absolute;
+        top: 25px;
+        left: 14px;
+        width: 45px;
+        border-top: 2px solid #dd6359;
+        content:"";
     }
 
     &__menuLink:hover {
         color: #fff;
     }
 
+    &__menuLink:hover::after {
+        opacity: 1;
+    }
+
+    .link1.header__menuLink::after {
+        width: 70px;
+    }
+
+    .link3.header__menuLink::after {
+        width: 53px;
+    }
+
+    .link4.header__menuLink::after {
+        width: 57px;
+    }
+
     &__slash {
         margin-left: 16px;
         margin-right: 16px;
-    }
-
-    &_activeLink {
-        color: #fff;
-        position: relative;
-    }
-
-    &_activeLink::after{
-        position: absolute;
-        top: 20px;
-        left: 14px;
-        width: 45px;
-        border-top: 2px solid #dd6359;
-        content:"";
     }
 
     // ЗАГОЛОВОК 2 БЛОК
