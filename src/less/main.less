@@ -332,6 +332,61 @@ button:hover {
 
         &__icon {
             margin-bottom: 10px;
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+
+            .fa:hover {
+                transition: all 0.3s;
+                color: #dd6359;
+            }
+        }
+
+        &__icon:hover .portfolio__hiddenMenu {
+            display: block;
+        }
+
+        // Выпадающий список
+
+        &__hiddenMenu {
+            position: absolute;
+            background-color: #394e5b;
+            border-radius: 5px;
+            border-bottom: 2px solid #2b3b45;
+            left: -62px;
+            z-index: 10;
+            display: none;
+            transition: all 0.5s;
+        }
+
+        &__list {
+            list-style: none;
+            margin: 0;
+            padding: 5px 0 0;
+        }
+
+        &__list:last-child{
+            margin-bottom: 3px;
+        }
+
+        &__item {
+            text-align: center;
+            font-family: "Ubuntu", sans-serif;
+            font-size: 16px;
+            letter-spacing: 3px;
+            padding: 16px 0 15px;
+            width: 147px;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: #fff;
+        }
+
+        &__item:hover {
+            background-color: #dd6359;
+            border-bottom: 2px solid #953d3d;
+            border-radius: 5px;
+            padding-bottom: 13px;
+            transition: all 0.1s;
         }
 
         &__allProjects {
